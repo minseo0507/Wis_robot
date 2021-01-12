@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<launch>
+
+	<include file = "$(find serving_robot_v5)/launch/serving_robot_gazebo.launch"/>
+
+	<!-- Load Map -->
+	<node name = "map_server" pkg = "map_server" type = "map_server" args = "$(find serving_robot_v5)/maps/map.yaml"/>
+
+	<include file="$(find serving_robot_v5)/launch/amcl.launch"/>
+	<include file="$(find serving_robot_v5)/launch/move_base.launch"/>
+
+
+</launch>
