@@ -7,7 +7,7 @@
 
     <include file="$(find serving_robot_v5)/description/launch/display.launch"/>    
 
-    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find serving_robot_v5)/robot.rviz"/>
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find serving_robot_v5)/rviz/robot.rviz"/>
 
     <node name="xacro_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-urdf -model serving_robot_v5 -param robot_description -x 0.0 -y 0.0 -z 0.03 -R 0.0 -P 0.0 -Y 0.0"/>
     
