@@ -167,7 +167,7 @@
 	    <origin xyz="0.045002 -0.17387 0.04999" rpy="0 0 0" />
 	    <axis xyz="0 1 0" />
 	    <dynamics
-	      friction="0.8"
+	      friction="0.6"
 	      damping="0.7" />
 	  </joint>
 
@@ -177,7 +177,7 @@
 	    <origin xyz="0.045002 0.17397 0.04999" rpy="0 0 0" />
 	    <axis xyz="0 1 0" />
 	    <dynamics
-	      friction="0.8"
+	      friction="0.6"
 	      damping="0.7" />
 	  </joint>
 
