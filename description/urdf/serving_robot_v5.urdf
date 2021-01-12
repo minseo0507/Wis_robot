@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<robot name="serving_robot_v5">
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://serving_robot_v5/description/meshes/stl/base_link.STL" />
+      </geometry>
+      <material name="Aluminum">
+        <color rgba="0.48235 0.55686 0.66274 1" />
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://serving_robot_v5/description/meshes/stl/base_link.STL" />
+      </geometry>
+    </collision>
+
+    <inertial>
+      <origin xyz="-0.0024446 8.5105E-05 0.38945" rpy="0 0 0" />
+      <mass value="24.495" />
+      <inertia
+        ixx="0.42576" ixy="0.00069367" ixz="0.0042087"
+        iyy="0.41821" iyz="0.00051327"
+        izz="0.64947" />
+    </inertial>    
+  </link>
+
+  <link name="wheel_l">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://serving_robot_v5/description/meshes/stl/wheel_l.STL" />
+      </geometry>
+      <material name="Rubber">
+        <color rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://serving_robot_v5/description/meshes/stl/wheel_l.STL" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-8.3504E-06 -0.02404 -3.3536E-05" rpy="0 0 0" />
+      <mass value="0.16934" />
+      <inertia
+        ixx="0.00012263" ixy="-9.3922E-09" ixz="4.0982E-08"
+        iyy="0.00022153" iyz="-3.7744E-08"
+        izz="0.00012278" />
+    </inertial>
+  </link>
+
+  <link name="wheel_r">
+    <visual>
+      <origin yz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://serving_robot_v5/description/meshes/stl/wheel_r.STL" />
+      </geometry>
+      <material name="Rubber">
+        <color rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://serving_robot_v5/description/meshes/stl/wheel_r.STL" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-2.8505E-05 0.02404 1.9541E-05" rpy="0 0 0" />
+      <mass value="0.16934" />
+      <inertia
+        ixx="0.00012274" ixy="3.2077E-08" ixz="-8.1538E-08"
+        iyy="0.00022153" iyz="-2.1997E-08"
+        izz="0.00012267" />
+    </inertial>
+  </link>
+
+  <link name="laser_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://serving_robot_v5/description/meshes/stl/laser_link.STL" />
+      </geometry>
+      <material name="LaserPlastic">
+        <color rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://serving_robot_v5/description/meshes/stl/laser_link.STL" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.0012332 0.00013829 -0.010655" rpy="0 0 0" />
+      <mass value="0.18368" />
+      <inertia
+        ixx="6.732E-05" ixy="3.5606E-07" ixz="1.6764E-08"
+        iyy="6.7746E-05" iyz="2.9723E-08"
+        izz="0.000122" />
+    </inertial>
+  </link>
+
+  <link name="imu_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://serving_robot_v5/description/meshes/stl/imu_link.STL" />
+      </geometry>
+      <material name="ImuPlastic">
+        <color rgba="0.8 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh ilename="package://serving_robot_v5/description/meshes/stl/imu_link.STL" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="8.6986E-05 -7.9439E-05 -0.00073949" rpy="0 0 0" />
+      <mass value="0.0007385" />
+      <inertia
+        ixx="3.8413E-08" ixy="1.4588E-13" ixz="-9.3238E-13"
+        iyy="1.3758E-08" iyz="-1.5924E-14"
+        izz="5.1863E-08" />
+    </inertial>
+  </link>
+
+  <link name="camera_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://serving_robot_v5/description/meshes/stl/camera_link.STL" />
+      </geometry>
+      <material name="CameraPlastic">
+        <color rgba="0.4 0.4 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://serving_robot_v5/description/meshes/stl/camera_link.STL" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.0042528 -0.001646 -0.0018368" rpy="0 0 0" />
+      <mass value="0.044752" />
+      <inertia
+        ixx="2.7278E-05" ixy="2.4434E-07" ixz="-1.1666E-09"
+        iyy="3.9447E-06" iyz="-2.7875E-09"
+        izz="2.7362E-05" />
+    </inertial>
+  </link>
+
+ <!-- for joint -->
+  <joint name="base_to_wheel_r" type="continuous">
+    <parent link="base_link" />
+    <child link="wheel_r" />
+    <origin xyz="0.045002 -0.17387 0.04999" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <dynamics
+      friction="0.8"
+      damping="0.7" />
+  </joint>
+
+  <joint name="base_to_wheel_l" type="continuous">
+    <parent link="base_link" />
+    <child link="wheel_l" />
+    <origin xyz="0.045002 0.17397 0.04999" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <dynamics
+      friction="0.8"
+      damping="0.7" />
+  </joint>
+
+  <joint name="laser_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="laser_link" />
+    <axis xyz="1 0 0" />
+    <origin xyz="-0.0017465 -0.00025802 0.32633" rpy="0 0 0" />
+  </joint>
+
+  <joint name="imu_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="imu_link" />
+    <origin xyz="0.044911 0 0.03109" rpy="0 0 0" />
+    <axis xyz="0 0 0" />
+  </joint>
+
+  <joint name="camera_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="camera_link" />
+    <axis xyz="0 0 0" />
+    <origin xyz="0.18646 0.0018922 0.65024" rpy="0 0.13004 0" />
+  </joint>
+
+    <!-- for gazebo -->
+   <gazebo reference="base_link">
+     <mu1>0.005</mu1>
+     <mu2>0.005</mu2>
+     <material>Gazebo/Brown</material>
+   </gazebo>
+
+   <gazebo reference="whee_l">
+     <mu1>0.5</mu1>
+     <mu2>0.5</mu2>
+     <kp>500000.0</kp>
+     <kd>10.0</kd>
+     <material>Gazebo/Black</material>
+    </gazebo>
+
+   <gazebo reference="wheel_r">
+     <mu1>0.5</mu1>
+     <mu2>0.5</mu2>
+     <kp>500000.0</kp>
+     <kd>10.0</kd>
+     <material>Gazebo/Black</material>
+   </gazebo>
+
+    <gazebo>
+    <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>20</updateRate>
+        <legacyMode>false</legacyMode>
+        <leftJoint>base_to_wheel_l</leftJoint>
+        <rightJoint>base_to_wheel_r</rightJoint>
+        <wheelSeparation>0.3</wheelSeparation>
+        <wheelDiameter>0.1</wheelDiameter>
+        <wheelTorque>20</wheelTorque>
+        <wheelAcceleration>1</wheelAcceleration>
+        <commandTopic>cmd_vel</commandTopic>
+        <odometryTopic>odom</odometryTopic>
+        <odometryFrame>odom</odometryFrame>
+        <odometrySource>world</odometrySource>
+        <publishOdomTF>true</publishOdomTF>
+        <publishWheelJointState>true</publishWheelJointState>
+        <publishWheelTF>false</publishWheelTF>
+        <publishTf>true</publishTf>
+        <robotBaseFrame>base_link</robotBaseFrame>
+        <rosDebugLevel>na</rosDebugLevel>
+    </plugin>
+  </gazebo>
+
+  <gazebo reference="camera_link">
+     <sensor type = "camera" name = "camera1">
+           <update_rate>30.0</update_rate>
+           <camera name = "head">
+             <horizontal_fov>1.3962634</horizontal_fov>
+             <image>
+               <width>800</width>
+               <height>600</height>
+               <format>R8G8B8</format>
+         </image>
+         <clip>
+           <near>0.04</near>
+           <far>300</far>
+         </clip>
+         <noise>
+           <type>gaussian</type>
+           <mean>0.0</mean>
+           <stddev>0.007</stddev>
+         </noise>
+       </camera>
+
+       <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+         <alwaysOn>true</alwaysOn>
+         <updateRate>0.0</updateRate>
+         <cameraName>camera1</cameraName>
+         <imageTopicName>image_raw</imageTopicName>
+         <frameName>camera_link</frameName>
+         <hackBaseline>0.07</hackBaseline>
+         <distortionK1>0.0</distortionK1>
+         <distortionK2>0.0</distortionK2>
+         <distortionK3>0.0</distortionK3>
+         <distortionT1>0.0</distortionT1>
+         <distortionT2>0.0</distortionT2>
+       </plugin>
+      </sensor>
+    </gazebo>
+
+    <gazebo reference="laser_link">
+        <material>Gazebo/Black</material>
+        <sensor type="ray" name="lds_lfcd_sensor">
+          <pose>0 0 0 0 0 0 </pose>
+          <visualize>true</visualize>
+          <update_rate>5</update_rate>
+          <ray>
+            <scan>
+              <horizontal>
+                <samples>360</samples>
+                <resolution>1</resolution>
+                <min_angle>0.0</min_angle>
+                <max_angle>6.28319</max_angle>
+              </horizontal>
+            </scan>
+            <range>
+              <min>0.120</min>
+              <max>3.5</max>
+              <resolution>0.015</resolution>
+            </range>
+            <noise>
+              <type>gaussian</type>
+              <mean>0.0</mean>
+              <stddev>0.01</stddev>
+            </noise>
+          </ray>
+          <plugin name="gazebo_ros_lds_lfcd_controller" filename="libgazebo_ros_laser.so">
+            <topicName>scan</topicName>
+            <frameName>laser_link</frameName>
+          </plugin>
+        </sensor>
+      </gazebo>
+
+      <gazebo reference="imu_link">
+        <material>Gazebo/Red</material>
+          <gravity>true</gravity> 
+        <sensor name="imu_sensor" type="imu">
+          <always_on>true</always_on>
+          <update_rate>100</update_rate>
+          <visualize>true</visualize>
+          <topic>__default_topic__</topic>
+          <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+            <topicName>imu</topicName>
+            <bodyName>imu_link</bodyName>
+            <updateRateHZ>10.0</updateRateHZ>
+            <gaussianNoise>0.0</gaussianNoise>
+            <xyzOffset>0 0 0</xyzOffset>
+            <rpyOffset>0 0 0</rpyOffset>
+            <frameName>imu_to_link</frameName>
+            <initialOrientationAsReference>false</initialOrientationAsReference>
+          </plugin>
+          <pose>0 0 0 0 0 0</pose>
+        </sensor>
+      </gazebo>
+
+</robot>
